@@ -79,12 +79,15 @@ for i in range(NN):
 #import matplotlib as mpl
 #mpl.matplotlib_fname()
 #import matplotlib.pyplot as plt Computer Modern
-csfont = {'fontname':'Computer Modern Roman'}
+# csfont = {'fontname':'Times New Roman'}
 
 
-font=font_manager.FontProperties(family='Computer Modern Roman',
-                                 weight='bold',
-                                 style='normal',size=12)
+# font=font_manager.FontProperties(family='Times New Roman',
+#                                  style='normal',size=12)
+
+
+rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
+rc('text', usetex=True)
 
 
 fig,ax=plt.subplots()
@@ -94,17 +97,21 @@ plt.xlim([-0.02,0.5])
 plt.ylim([-1.6,0.08])
 my_y_ticks = [0.0,-0.5,-1.0,-1.5]
 plt.yticks(my_y_ticks)
-plt.plot(u_list,exponent_TITI_list,'*' ,color='tab:blue',label=r"$TI+TI$",zorder=-3)#
-plt.plot(u_list,exponent_NITI_list,'D' ,color='tab:orange',label=r"$NI+TI$",zorder=-4)#
+plt.plot(u_list,exponent_NINI_list,'^' ,color='tab:cyan',label=r"$L: \mbox{NI}, R: \mbox{NI}$",zorder=-4)#
+plt.plot(u_list,exponent_TINI_list,'o' ,color='tab:green',label=r"$L: \mbox{TI},R: \mbox{NI}$",zorder=-3)#
+plt.plot(u_list,exponent_NITI_list,'D' ,color='tab:orange',label=r"$L: \mbox{NI}, R: \mbox{TI}$",zorder=-4)#
+plt.plot(u_list,exponent_TITI_list,'*' ,color='tab:blue',label=r"$L: \mbox{TI}, R:\mbox{TI}$",zorder=-3)#
 
-plt.plot(u_list,exponent_TINI_list,'o' ,color='tab:green',label=r"$TI+NI$",zorder=-3)#
-plt.plot(u_list,exponent_NINI_list,'^' ,color='tab:cyan',label=r"$NI+NI$",zorder=-4)#
+
+
+
 plt.plot(u_list,exponent_analytic_list,'--' ,color='k',label=r"$-2U/\pi W$",zorder=4)#
 
-plt.legend(loc='best',fontsize=12.5,prop=font)
+plt.legend(loc='best',fontsize=12.5)
+# plt.legend(loc='best',fontsize=12.5,prop=font)
 #plt.legend(loc='best',fontsize=12.5,prop=csfont)
-plt.xlabel(r'$U/W$',fontsize=18,**csfont)
-plt.ylabel(r'$\alpha$',fontsize=18,**csfont)
+plt.xlabel(r'$U/W$',fontsize=18)
+plt.ylabel(r'$\alpha$',fontsize=18)
 #plt.xlabel(r'$U/W$',fontsize=18,**csfont)
 #plt.ylabel(r'$\alpha$',fontsize=18,**csfont)
 plt.tight_layout()
@@ -119,18 +126,6 @@ plt.show()
 
 #%%
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

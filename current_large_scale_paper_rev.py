@@ -12,6 +12,7 @@ from tool.tool_current_noninteracting import current_integrad
 from scipy.integrate import quad
 import matplotlib.pyplot as plt
 from tool.tool_general import loglogder
+from matplotlib.pyplot import rc
 
 
 
@@ -104,6 +105,10 @@ for i in range(NN):
 
 
 #%%
+
+
+rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
+rc('text', usetex=True)
 
 fig,ax=plt.subplots()
 #ax.set_xscale('log')

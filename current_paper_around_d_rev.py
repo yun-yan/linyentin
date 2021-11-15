@@ -20,6 +20,7 @@ from tool.tool_current_noninteracting import current_integrad
 from scipy.integrate import quad
 import matplotlib.pyplot as plt
 from tool.tool_general import loglogder
+from matplotlib.pyplot import rc
 
 #%%
 def non_interaction_current_list(NN,E,d,D):
@@ -166,6 +167,12 @@ u_list=np.zeros(NN,dtype=np.float64)
 
 mu_list=np.zeros(N,dtype=np.float64)
 
+
+
+
+
+rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
+rc('text', usetex=True)
 
     
 
