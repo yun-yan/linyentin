@@ -1,5 +1,5 @@
 numpy==1.18.*
 matplotlib==3.*
 scipy==1.4.*
-numba=0.54.*
-cmath=3.*
+numba==0.54.*
+cmath==3.*
